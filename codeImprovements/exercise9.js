@@ -6,7 +6,17 @@
 //   return sum;
 // }
 
-const calculateMatrixSum=(matrix)=>matrix.reduce((sum, row)=>sum+row.reduce((rowSum, num)=>rowSum+num,0),0);
+function calculateMatrixSum(matrix) {
+  let totalSum = 0;
+  
+  for (let row of matrix) {
+    for (let num of row) {
+      totalSum += num;
+    }
+  }
+  
+  return totalSum;
+}
 // Example usage:
 const matrix = [
   [1, 2, 3],
